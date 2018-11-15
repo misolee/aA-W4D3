@@ -12,8 +12,18 @@
     
     <ul id="navbar">
       <% if !current_user %>
-        <li><a href="<%= new_session_url %>">Login</a></li>
-        <li><a href="<%= new_user_url %>">Sign Up</a></li>
+      <form action="<%= new_session_url %>" method="get">
+        <input type="hidden"
+               name="authenticity_token"
+              value="<%= form_authenticity_token %>">
+        <input type="submit" name="" value="Login">
+      </form>
+      <form action="<%= new_user_url %>" method="get">
+        <input type="hidden"
+               name="authenticity_token"
+              value="<%= form_authenticity_token %>">
+        <input type="submit" name="" value="Sign Up">
+      </form>
       <% else %>
       <form action="<%= session_url %>" method="post">
         <input type="hidden"
@@ -23,7 +33,12 @@
         <input type="submit" value="Log Out">
       </form>
       <% end %>
-        <li><a href="<%= cats_url %>">Go Back to Homepage</a></li>
+      <form action="<%= cats_url %>" method="get">
+        <input type="hidden"
+               name="authenticity_token"
+              value="<%= form_authenticity_token %>">
+        <input type="submit" value="Go Back to Homepage">
+      </form>
     </ul>
 
     <%= yield %>
