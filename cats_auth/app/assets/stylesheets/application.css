@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+body {
+  color: white;
+  background: url('https://orig00.deviantart.net/0c13/f/2013/147/f/8/f804e0d61ee70265e804d4428e7a85c3-d66t0lz.png');
+  background-color: darksalmon;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 90%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#navbar li {
+  float: right;
+}
+
+#navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#navbar li a:hover {
+  background-color: #ff6666;
+}
